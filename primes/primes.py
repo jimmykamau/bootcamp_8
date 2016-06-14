@@ -24,7 +24,7 @@ nth = 50 # 50 prime numbers
 primes_list = get_primes(nth) # Get first 50 prime numbers
 print(primes_list) 
 
-# Test prime-checking functions
+# Test for prime-checking functions
 '''
 def test_primes(n, prime_list):
  	# Generate list of prime numbers using sieve algorithm
