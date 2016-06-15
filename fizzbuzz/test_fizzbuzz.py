@@ -31,5 +31,6 @@ class FizzBuzzTest(unittest.TestCase):
 	def test_indivisibility(self):
 		self.assertEqual(fizzbuzz.fizz_buzz(28), 28, msg="should return the number if it's indivisible by either 3 or 5")
 
-	'''def test_indivisibility(self):
-		self.assertEqual(fizzbuzz.fizz_buzz(0), 0, msg="should return the number if it's indivisible by either 3 or 5")'''
+	# Conflict between returning 'FizzBuzz' and 0
+	def test_indivisibility(self):
+		self.assertEqual(fizzbuzz.fizz_buzz(0), 'FizzBuzz', msg="should return `FizzBuzz` for number divisible by 3 and 5")
