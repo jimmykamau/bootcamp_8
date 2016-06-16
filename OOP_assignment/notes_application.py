@@ -37,7 +37,7 @@ class NotesApplication(object):
 			i += 1
 		return search_results
 
-	# This function replaces the content in the note at note_id with new_content.
+	# This function replaces the content in the note at note_id with new_content
 	def edit(self, note_id, new_content):
 		try:
 			self.notes_list[note_id] = new_content
