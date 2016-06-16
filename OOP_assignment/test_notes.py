@@ -47,8 +47,9 @@ class NotesTest(unittest.TestCase):
 	def test_note2_search_method(self):
 		self.assertIn("Showing results for search `o`\n\nNote ID: 0 \nFirst edited one\n\nBy Author John Doe\n\nNote ID: 1 \nSecond edited note\n\nBy Author John Doe\n\n", self._note.search("o"), msg="Cannot search for string present in more than one note")
 
+	# List both notes after editing
 	def test_note3_list1_method(self):
-		self.assertEqual(self._note.list(), "Note ID: %d \n%s\n\nBy Author %s\n\nNote ID: %d \n%s\n\nBy Author %s\n\n" % (0, "First edited one", "John Doe", 1, "Second edited note", "John Doe"), msg="Cannot list created notes")
+		self.assertEqual(self._note.list(), "Note ID: %d \n%s\n\nBy Author %s\n\nNote ID: %d \n%s\n\nBy Author %s\n\n" % (0, "First edited one", "John Doe", 1, "Second edited note", "John Doe"), msg="Cannot list edited notes")
 
 if __name__ == '__main__':
     unittest.main()
