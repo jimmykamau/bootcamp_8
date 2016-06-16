@@ -27,10 +27,6 @@ class NotesTest(unittest.TestCase):
 	def test_list2_method(self):
 		self.assertEqual(self._note.edit(0, "First edited one"), "First edited one", "Cannot edit notes")
 
-	# Test list method after editing
-	def test_list21_method(self):
-		self.assertEqual(self._note.list(), "Note ID: %d \n%s\n\nBy Author %s\n\n" % (0, "First edited one", "John Doe"))
-
 
 if __name__ == '__main__':
     unittest.main()
