@@ -1,10 +1,11 @@
-# Displays the first n fibonacci numbers
+# Generate Fibonacci sequence from 0 to n
 def fib(n):
 	a = [0]
 	b,c = 1,0
-	for i in range(n-1):
+	for i in range(n):
 		a.append(b)
 		b,c = c+b, b
-	return a
+		if b>n:
+			return a
 
-#print(fib(10))
+#print(fib(20))
